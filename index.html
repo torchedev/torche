@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torche — JS Framework</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+    body, html { height: 100%; display: flex; justify-content: center; align-items: center; background: #0a0a0a; color: #fff; }
+
+    .container { text-align: center; padding: 2rem; max-width: 900px; }
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(90deg, #ff6f00, #ffca28);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+        0% { text-shadow: 0 0 5px #ff6f00, 0 0 10px #ff6f00; }
+        100% { text-shadow: 0 0 20px #ffca28, 0 0 30px #ffca28; }
+    }
+
+    p { font-size: 1.25rem; margin-bottom: 2.5rem; color: #ccc; }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .buttons a {
+        position: relative;
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: #fff;
+        background: #ff6f00;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.4s;
+        box-shadow: 0 5px 15px rgba(255,111,0,0.4);
+    }
+
+    .buttons a::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: rgba(255,255,255,0.1);
+        transform: rotate(45deg);
+        transition: all 0.5s;
+    }
+
+    .buttons a:hover {
+        background: #ffa000;
+        box-shadow: 0 8px 20px rgba(255,160,0,0.6);
+    }
+
+    .buttons a:hover::before {
+        top: 100%;
+        left: 100%;
+    }
+
+    @media(max-width: 600px) {
+        h1 { font-size: 3rem; }
+        .buttons a { width: 100%; text-align: center; }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Torche</h1>
+        <p>Blazing-fast, modern, and minimal JavaScript framework.</p>
+        <div class="buttons">
+            <a href="https://torche.net" target="_blank">Visit Torche.net</a>
+            <a href="https://torche.net/docs" target="_blank">Docs</a>
+            <a href="https://github.com/torche" target="_blank">GitHub</a>
+        </div>
+    </div>
+</body>
+</html>
